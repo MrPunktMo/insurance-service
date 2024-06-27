@@ -1,0 +1,1 @@
+docker volume create insurance_data --opt type=none --opt device=C:\Users\momor\Workspace\insurance-service\insurance-data-service\mysql-data --opt o=bind
