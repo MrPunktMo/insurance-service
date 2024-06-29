@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f59b7f-49e2-4f73-af5d-6221390abf2f" name="Changes" comment="" />
+    <list default="true" id="b6f59b7f-49e2-4f73-af5d-6221390abf2f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../insurance-database/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-database/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-database/mysql-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-database/service/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -37,24 +40,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.mysql-service: Compose Deployment.executor": "Run",
-    "Docker.postgres.db: Compose Deployment.executor": "Run",
-    "Docker.postgres: Compose Deployment.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "<unknown>",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/momor/Workspace/insurance-service/insurance-database",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.mysql-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.postgres.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/momor/Workspace/insurance-service/insurance-database&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Docker.mysql-service: Compose Deployment">
     <configuration name="InsuranceDataServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -126,6 +129,8 @@
       <workItem from="1719429822650" duration="3982000" />
       <workItem from="1719468890361" duration="91000" />
       <workItem from="1719469052492" duration="1334000" />
+      <workItem from="1719470638751" duration="607000" />
+      <workItem from="1719675548552" duration="640000" />
     </task>
     <servers />
   </component>

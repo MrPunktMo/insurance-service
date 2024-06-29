@@ -1,0 +1,64 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    container_name: insurance_service_db
+    environment:
+      MYSQL_DATABASE: 'insurance_data'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+    ports:
+      # <Port exposed> : <MySQL Port running inside container>
+      - '8182:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '8182'
+      # Where our data will be persisted
+    volumes:
+      - insurance_data:/var/lib/mysql
+    networks:
+      - keycloak_network
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.4
+    container_name: insurance_service_keycloak
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_Hostname: localhost
+      KC_HOSTNAME_STRICT_BACKCHANNEL: false
+      KC_HTTP_ENABLED: true
+      KC_HOSTNAME_STRICT_HTTPS: false
+      KC_HEALTH_ENABLED: true
+      ENV KC_METRICS_ENABLED: true
+      KC_DB: mysql
+      KC_DB_URL: 'jdbc:mysql://insurance_service_db:3306/insurance_data'
+      KC_DB_USERNAME: root
+      KC_DB_PASSWORD: password
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - keycloak_network
+
+volumes:
+  insurance_data:
+    external: true
+
+networks:
+  keycloak_network:
+    driver: bridge
