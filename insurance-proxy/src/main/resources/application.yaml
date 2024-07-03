@@ -1,3 +1,74 @@
+client-security-matchers: >
+  /login/**,
+  /oauth2/**,
+  /logout,
+  /insurance-ui/**,
+  /insurance-data/**
+client-permit-all: >
+  /login/**,
+  /oauth2/**,
+  /insurance-data/**
+
+#client conf
+
+issuer-uri: ${INSURANCE_ISSUER_URI:http://localhost:8080/realms/insurance_company}
+insurance-redirect-uri: ${INSURANCE_REDIRECT_URI:http://localhost:8181}
+
 spring:
   application:
     name: insurance-proxy
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: ${issuer-uri}
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            provider: keycloak
+            client-id: ${client-id}
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+            redirect-uri: ${insurance-redirect-uri}
+      resourceserver:
+        jwt:
+          issuer-uri: ${issuer-uri}
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      #        - SaveSession
+      routes:
+        # set a redirection from / to the UI
+        - id: home
+          uri: ${spots-proxy-uri}
+          predicates:
+            - Path=/
+          filters:
+            - RedirectTo=301, ${spots-proxy-uri}/spots/
+        - id: spots-web-redirect
+          uri: ${spots-web-uri}
+          predicates:
+            - Path=/spots-web/**
+            - Header=authorization, ^Bearer.*
+          filters:
+            - RewritePath=/spots-web/(?<segment>.*),/spots-web/$\{segment}
+        #         BFF access to greetings API (with TokenRelay replacing session cookies with access tokens)
+        #         To be used by SPAs (Angular app in our case)
+        - id: spots-web
+          uri: ${spots-web-uri}
+          predicates:
+            - Path=/spots-web/**
+          filters:
+            - TokenRelay=
+            - RewritePath=/spots-web/(?<segment>.*),/spots-web/$\{segment}
+            - SaveSession
+        - id: spots
+          uri: ${ui-uri}
+          predicates:
+            - Path=/spots/**
+  main:
+    allow-bean-definition-overriding: true
+

@@ -1,0 +1,41 @@
+security-matchers: >
+  /hello/**,
+  /fee,
+  /fee/**
+
+authorize-admin: >
+  /**/fee,
+  /**/admin
+
+authorize-user: >
+  /**/user,
+  /insurance-data/fee/**
+
+permit-all: >
+  /**/public
+
+server:
+  address: ${INSURANCE_DATA_SERVICE_URL:localhost}
+  port: ${INSURANCE_DATA_SERVICE_PORT:8283}
+  servlet:
+    context-path: /insurance-data
+  ssl:
+    enabled: false
+
+spring:
+  application:
+    name: insurance-data-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: ${INSURANCE_DATABASE_URL:jdbc:mysql://localhost:8182/insurance_data}
+    username: user
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${INSURANCE_DATA_ISSUER:http://localhost:8080/realms/insurance_company}

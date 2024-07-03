@@ -1,0 +1,3 @@
+ISO_3166_1_ALPHA_2;ISO_3166_1_ALPHA_2_REGION_CODE;REGION1;REGION2;REGION3;REGION4;POSTLEITZAHL;ORT;AREA1;AREA2;LATITUDE;LONGITUDE;ZEITZONE;UTC;SOMMERZEIT;ACTIVE
+"DE";"DE-BW";"Baden-Württemberg";"Freiburg";"Breisgau-Hochschwarzwald";"BadKrozingen";"79189";"BadKrozingen";;;47.91582;7.69985;"Europe/Berlin";"UTC+1";true;"A"
+"DE";"DE-BW";"Baden-Württemberg";"Freiburg";"Breisgau-Hochschwarzwald";"BadKrozingen";"79258";"Hartheim";;;47.93667;7.62788;"Europe/Berlin";"UTC+1";true;"A"

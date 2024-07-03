@@ -1,0 +1,201 @@
+openapi: 3.0.0
+x-stoplight:
+  id: azt3uwrqqxr6h
+info:
+  title: insurance-data-api
+  version: '1.0'
+  description: Insurance company data service
+servers:
+  - url: 'http://localhost:8180'
+paths:
+  /fee:
+    get:
+      summary: Get all fees
+      tags:
+        - Fee
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FeeResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      operationId: getAllFees
+      x-stoplight:
+        id: efllpcs12n8b6
+      description: Get all fees
+    post:
+      summary: Request fee
+      tags:
+        - Fee
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeeResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      operationId: postRequestFee
+      x-stoplight:
+        id: 6xriflgml4af7
+      description: Request the calculation of an insurance fee
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeeRequest'
+      security:
+        - bearerKey: []
+  /user/fee:
+    get:
+      summary: Get fees of specific user
+      tags:
+        - Fee
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FeeResponse'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      operationId: getUserFees
+      x-stoplight:
+        id: ydzy5x1zehnyx
+      description: Get the fees of one specific user. Identified by the provied Auth token
+  /import/region:
+    post:
+      summary: Import region csv file
+      responses:
+        '200':
+          description: OK
+      operationId: postImportRegion
+      x-stoplight:
+        id: jzd1ue3avi5m9
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - regionFile
+              properties:
+                regionFile:
+                  type: string
+                  x-stoplight:
+                    id: 1i8268t89yrri
+                  format: byte
+      description: Import Region csv file endpoint
+      tags:
+        - Import
+components:
+  schemas:
+    FeeRequest:
+      title: FeeRequest
+      x-stoplight:
+        id: iuew8fmxkfugk
+      type: object
+      x-tags:
+        - Fee
+      description: Request for calculating the insurance fee
+      required:
+        - kilometrage
+        - vehicleType
+        - postalCode
+        - userName
+      properties:
+        kilometrage:
+          type: integer
+          x-stoplight:
+            id: 1ev71vfbumy52
+          format: int32
+          exclusiveMinimum: false
+          minimum: 0
+        vehicleType:
+          type: string
+          x-stoplight:
+            id: te81oia758bkl
+        postalCode:
+          type: string
+          x-stoplight:
+            id: k4zkl760l9v1g
+          pattern: '^[0-9]{5}'
+        userName:
+          type: string
+          x-stoplight:
+            id: tck7zxpf2cw08
+    FeeResponse:
+      title: FeeResponse
+      x-stoplight:
+        id: o0qwsws0960sn
+      type: object
+      required:
+        - amount
+        - kilometrage
+        - region
+        - vehicleType
+        - createdOn
+      properties:
+        amount:
+          type: number
+          x-stoplight:
+            id: 99kv7du90ne6e
+          format: float
+        kilometrage:
+          type: integer
+          x-stoplight:
+            id: i8agzaukvrnmp
+          format: int32
+        region:
+          type: string
+          x-stoplight:
+            id: 8ye4up36v78g4
+        vehicleType:
+          type: string
+          x-stoplight:
+            id: mvnz4znz5w6q4
+        createdOn:
+          type: string
+          x-stoplight:
+            id: pzrbeflfs36i4
+          format: date
+      description: Resonse to the requested fee
+  securitySchemes:
+    bearerKey:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: ''
+          tokenUrl: ''
+          refreshUrl: ''
+          scopes: {}
+tags:
+  - name: Fee
+    description: Insurance Fee
+  - name: Import
+    description: Import files

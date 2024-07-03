@@ -5,13 +5,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6f59b7f-49e2-4f73-af5d-6221390abf2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/api/FeeApiCustomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/api/FeeApiImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/api/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/mapper/FeeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FactorKilometrageDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FactorRegionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FactorVehicleTypeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FeeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FactorKilometrageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FactorRegionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FactorVehicleTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/faktor/service/FeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/imports/mapper/ColumnMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/imports/mapper/TableMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/imports/model/AllTabColumnDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/imports/model/AllTabColumnPK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/imports/repository/AllTabColumnRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/imports/service/MetaDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/region/model/RegionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/region/model/RegionPK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/region/repository/RegionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/data/region/service/RegionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/components/ConfigHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/components/ConfigHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/components/ConfigHandlerProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/config/ImportConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/service/ImportProcessService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/service/ImportProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/service/RegionImportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/util/ColumnExtracter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/util/DateFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/util/ImportDataPreparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/util/ImportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/util/ImportServiceChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/util/NumberFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/wrapper/Column.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/wrapper/ImportData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/imports/wrapper/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/exception/ApplicationExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/exception/FeeProcessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/exception/FileFieldMappingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/exception/ImportException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/exception/RegionNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/file/FileEncoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/file/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/file/FileWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/util/logging/Logging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/triplem/insurancedataservice/data/faktor/repository/FeeRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/triplem/insurancedataservice/data/imports/repository/AllTabRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/triplem/insurancedataservice/data/imports/service/MetaDataServiceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/triplem/insurancedataservice/data/region/repository/RegionRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/triplem/insurancedataservice/imports/ImportProcessServiceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/region_test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-proxy/src/main/java/org/triplem/insuranceproxy/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/InsuranceDataServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/triplem/insurancedataservice/InsuranceDataServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../insurance-database/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-database/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-database/mysql-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-database/service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-proxy/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-proxy/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-proxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-proxy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-proxy/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -25,7 +103,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -40,25 +118,162 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.mysql-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.postgres.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/momor/Workspace/insurance-service/insurance-database&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.mysql-service: Compose Deployment.executor": "Run",
+    "Docker.postgres.db: Compose Deployment.executor": "Run",
+    "Docker.postgres: Compose Deployment.executor": "Run",
+    "HTTP Request.All in generated-requests.executor": "Run",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "JUnit.AllTabRepositoryTests.executor": "Run",
+    "JUnit.AllTabRepositoryTests.testGetAllMetaDataFromTable.executor": "Run",
+    "JUnit.AllTableRepositoryTests.executor": "Debug",
+    "JUnit.AllTableRepositoryTests.testGetAllMetaDataFromTable.executor": "Debug",
+    "JUnit.FahrzeugTypRepositoryTests.executor": "Run",
+    "JUnit.FahrzeugTypRepositoryTests.testGetAllFahrzeugypenFormDb.executor": "Run",
+    "JUnit.FahrzeugTypServiceTest.executor": "Run",
+    "JUnit.FahrzeugTypServiceTest.getAllFahrzeugTypen.executor": "Run",
+    "JUnit.FahrzeugTypServiceTest.saveFahrzeugTyp.executor": "Run",
+    "JUnit.FeeRepositoryTests.executor": "Run",
+    "JUnit.FeeRepositoryTests.testSaveFeeInDatabase.executor": "Run",
+    "JUnit.ImportDataServiceTests.getAllMetaDataMappedToWrapper.executor": "Debug",
+    "JUnit.ImportProcessServiceTests.testImportRegionFile.executor": "Run",
+    "JUnit.RegionRepositoryTests.testGetAllRegions.executor": "Run",
+    "JUnit.RegionRepositoryTests.testSaveRegion.executor": "Run",
+    "JUnit.VehicleTypeRepositoryTests.executor": "Run",
+    "Maven.insurance-data-service [clean].executor": "Run",
+    "Maven.insurance-data-service [compile].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.InsuranceDataServiceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/momor/workspace/insurance-service/insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
-  <component name="RunManager" selected="Docker.mysql-service: Compose Deployment">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\momor\workspace\insurance-service\insurance-data-service\src\main\java\org\triplem\insurancedataservice\imports" />
+      <recent name="C:\Users\momor\workspace\insurance-service\insurance-data-service\src\main\java\org\triplem\insurancedataservice\data\imports\mapper" />
+      <recent name="C:\Users\momor\workspace\insurance-service\insurance-data-service\src\main\java\org\triplem\insurancedataservice\util\" />
+      <recent name="C:\Users\momor\workspace\insurance-service\insurance-data-service\src\main\java\org\triplem\insurancedataservice" />
+      <recent name="C:\Users\momor\workspace\insurance-service\insurance-data-service\src\main\java\org\triplem\insurancedataservice\import" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.triplem.insurancedataservice.data.imports.repository" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.triplem.insurancedataservice.data.faktor.fahrzeugTyp.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.triplem.insurancedataservice.imports.service" />
+      <recent name="org.triplem.insurancedataservice.data.imports.service" />
+      <recent name="org.triplem.insurancedataservice.data.imports.mapper" />
+      <recent name="org.triplem.insurancedataservice.util.logging" />
+      <recent name="org.triplem.insurancedataservice.util.exception" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ImportProcessServiceTests.testImportRegionFile">
+    <configuration name="AllTabRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insurance-data-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.triplem.insurancedataservice.data.imports.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.triplem.insurancedataservice.data.imports.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.triplem.insurancedataservice.data.imports.repository.AllTabRepositoryTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllTabRepositoryTests.testGetAllMetaDataFromTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insurance-data-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.triplem.insurancedataservice.data.imports.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.triplem.insurancedataservice.data.imports.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.triplem.insurancedataservice.data.imports.repository.AllTabRepositoryTests" />
+      <option name="METHOD_NAME" value="testGetAllMetaDataFromTable" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImportProcessServiceTests.testImportRegionFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insurance-data-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.triplem.insurancedataservice.imports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.triplem.insurancedataservice.imports" />
+      <option name="MAIN_CLASS_NAME" value="org.triplem.insurancedataservice.imports.ImportProcessServiceTests" />
+      <option name="METHOD_NAME" value="testImportRegionFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MetaDataServiceTests.getAllMetaDataMappedToWrapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insurance-data-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.triplem.insurancedataservice.imports.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.triplem.insurancedataservice.data.imports.service" />
+      <option name="MAIN_CLASS_NAME" value="org.triplem.insurancedataservice.data.imports.service.MetaDataServiceTests" />
+      <option name="METHOD_NAME" value="getAllMetaDataMappedToWrapper" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegionRepositoryTests.testSaveRegion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insurance-data-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.triplem.insurancedataservice.data.region.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.triplem.insurancedataservice.data.region.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.triplem.insurancedataservice.data.region.repository.RegionRepositoryTests" />
+      <option name="METHOD_NAME" value="testSaveRegion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InsuranceDataServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="insurance-data-service" />
@@ -73,48 +288,21 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="mysql-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="mysql-service/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="postgres/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="postgres.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="postgres/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.mysql-service: Compose Deployment" />
-        <item itemvalue="Docker.postgres: Compose Deployment" />
-        <item itemvalue="Docker.postgres.db: Compose Deployment" />
+        <item itemvalue="JUnit.ImportProcessServiceTests.testImportRegionFile" />
+        <item itemvalue="JUnit.MetaDataServiceTests.getAllMetaDataMappedToWrapper" />
+        <item itemvalue="JUnit.AllTabRepositoryTests.testGetAllMetaDataFromTable" />
+        <item itemvalue="JUnit.AllTabRepositoryTests" />
+        <item itemvalue="JUnit.RegionRepositoryTests.testSaveRegion" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-azul-17.0.10-4caba194b151-cd1dbda1" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -131,10 +319,20 @@
       <workItem from="1719469052492" duration="1334000" />
       <workItem from="1719470638751" duration="607000" />
       <workItem from="1719675548552" duration="640000" />
+      <workItem from="1719841838325" duration="9953000" />
+      <workItem from="1719857090284" duration="2544000" />
+      <workItem from="1719860308413" duration="693000" />
+      <workItem from="1719905049125" duration="23456000" />
+      <workItem from="1719990338739" duration="3536000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
 </project>
