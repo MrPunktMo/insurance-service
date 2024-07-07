@@ -1,0 +1,11 @@
+org\triplem\insurancedataservice\data\factor\service\FactorKilometrageTests.class
+org\triplem\insurancedataservice\data\imports\service\MetaDataServiceTests.class
+org\triplem\insurancedataservice\data\region\repository\RegionRepositoryTests.class
+org\triplem\insurancedataservice\imports\ImportProcessServiceTests.class
+org\triplem\insurancedataservice\data\factor\repository\FeeRepositoryTests.class
+org\triplem\insurancedataservice\data\imports\repository\AllTabRepositoryTests.class
+org\triplem\insurancedataservice\data\factor\repository\FactorVehicleTypeRepositoryTests.class
+org\triplem\insurancedataservice\data\factor\service\FactorRegionServiceTests.class
+org\triplem\insurancedataservice\imports\ProcessStarterTests.class
+org\triplem\insurancedataservice\InsuranceDataServiceApplicationTests.class
+org\triplem\insurancedataservice\data\factor\service\FactorVehicleTypeServiceTests.class

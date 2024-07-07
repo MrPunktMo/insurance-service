@@ -1,7 +1,6 @@
 package org.triplem.insurancedataservice.api;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +15,7 @@ public class HelloController {
     }
 
     @GetMapping("/admin")
-    public ResponseEntity<String> getAdminContent(Authentication authentication) {
+    public ResponseEntity<String> getAdminContent() {
         System.out.println("hello, it's me...");
         return ResponseEntity.ok("Only for admins");
     }

@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -66,6 +67,7 @@ public class SecurityConfig {
         //Configure which request to authenticate
         http.authorizeHttpRequests(requests -> requests
                 .requestMatchers(Arrays.stream(authorizeAdmin).map(AntPathRequestMatcher::new).toArray(AntPathRequestMatcher[]::new)).hasAuthority("admin")
+                .requestMatchers(HttpMethod.GET, "/fee").hasAuthority("admin")
                 .requestMatchers(Arrays.stream(authorizeUser).map(AntPathRequestMatcher::new).toArray(AntPathRequestMatcher[]::new)).hasAnyAuthority("admin", "user")
                 .requestMatchers(Arrays.stream(permitAll).map(AntPathRequestMatcher::new).toArray(AntPathRequestMatcher[]::new)).permitAll()
                 .anyRequest().authenticated());
@@ -100,7 +102,6 @@ public class SecurityConfig {
         public JwtAuthenticationToken convert(Jwt jwt) {
             return new JwtAuthenticationToken(jwt, authoritiesConverter.convert(jwt), jwt.getClaimAsString(StandardClaimNames.PREFERRED_USERNAME));
         }
-
     }
 
 }

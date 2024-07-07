@@ -103,6 +103,7 @@ public class FileService {
     }
 
     private boolean validateImportFileName(File inFile, FilenameFilter fileNameFilter) {
+
         String fileName = inFile.getName();
         boolean sucessStatus = true;
         File inFilePath = new File(inFile.getParent());
@@ -114,6 +115,10 @@ public class FileService {
         }
 
         return sucessStatus;
+    }
+
+    public File createTemporaryFile(byte[] content, String prefixOfFile, String suffixOfFile) throws IOException {
+        return new File(Files.write(Files.createTempFile(prefixOfFile, suffixOfFile), content).toUri());
     }
 
     public String[] getAllLinesFromFile(File file, boolean skipHeader, FileEncoding fileEncoding) {

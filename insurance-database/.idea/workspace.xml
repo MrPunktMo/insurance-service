@@ -5,22 +5,135 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2730b6c0-3401-4af5-99c8-24856a437f21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../insurance-proxy/src/main/java/org/triplem/insuranceproxy/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-data-service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/insurance-data-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/FactorApiImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/ImportApiImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/RegionApiImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/mapper/FactorKilometrageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/mapper/FactorRegionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/mapper/FactorVehicleTypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/mapper/FeeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/repository/FactorKilometrageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/repository/FactorRegionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/repository/FactorVehicleTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/service/FactorKilometrageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/service/FactorRegionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/service/FactorVehicleTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/service/FeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/mapper/RegionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/metaconfig/ConfigHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/metaconfig/ConfigHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/metaconfig/ConfigHandlerProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/starter/ProcessStarter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/starter/ProcessStarterConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/starter/ProcessStarterImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/starter/ProcessStarterProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/util/ImportData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/util/ProcessStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/util/exception/ProcessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/util/exception/ProcessRunningException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/factor/service/FactorKilometrageTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/factor/service/FactorRegionServiceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/factor/service/FactorVehicleTypeServiceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/imports/ProcessStarterTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/annotations/org/triplem/insurancedataservice/data/factor/mapper/FeeMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../insurance-data-service/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../insurance-data-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-data-service/compose.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../insurance-data-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/FeeApiCustomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/FeeApiCustomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/FeeApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/FeeApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/api/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/mapper/FeeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FactorKilometrageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/model/FactorKilometrageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FactorRegionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/model/FactorRegionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FactorVehicleTypeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/model/FactorVehicleTypeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/model/FeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/model/FeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FactorKilometrageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FactorRegionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FactorVehicleTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/repository/FeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/factor/repository/FeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/faktor/service/FeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/region/service/RegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/data/region/service/RegionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/ConfigHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/ConfigHandlerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/components/ConfigHandlerProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/config/ImportConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/config/ImportConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/service/ImportProcessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/service/ImportProcessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/service/RegionImportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/service/RegionImportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/util/ImportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/util/ImportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/wrapper/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/imports/wrapper/Column.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/util/file/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/java/org/triplem/insurancedataservice/util/file/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/main/resources/insurance-data-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/main/resources/insurance-data-api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/faktor/repository/FactorVehicleTypeRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/factor/repository/FactorVehicleTypeRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/faktor/repository/FeeRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/factor/repository/FeeRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/data/faktor/service/FeeServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/imports/ImportProcessServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/src/test/java/org/triplem/insurancedataservice/imports/ImportProcessServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/FILES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/com/tsystems/spots/api/ApiUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/com/tsystems/spots/api/FeeApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/com/tsystems/spots/api/ImportApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/com/tsystems/spots/api/UserApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/com/tsystems/spots/models/FeeRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/com/tsystems/spots/models/FeeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/insurance-data-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/insurance-data-api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/insurance-data-api.yaml-insurance-data-api.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/api/FeeApiCustomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/api/FeeApiCustomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/api/FeeApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/api/FeeApiImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/api/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/api/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/config/SecurityConfig$KeycloakAuthenticationConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/config/SecurityConfig$KeycloakAuthenticationConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/config/SecurityConfig$KeycloakAuthoritiesConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/config/SecurityConfig$KeycloakAuthoritiesConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/mapper/FeeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/mapper/FeeMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/model/FactorKilometrageDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/model/FactorRegionDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/model/FactorVehicleTypeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/model/FeeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/repository/FactorKilometrageRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/repository/FactorRegionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/repository/FactorVehicleTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/repository/FeeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/faktor/service/FeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/imports/mapper/ColumnMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/imports/mapper/ColumnMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/region/service/RegionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/data/region/service/RegionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/components/ConfigHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/components/ConfigHandlerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/components/ConfigHandlerProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/config/ImportConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/config/ImportConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/service/ImportProcessService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/service/ImportProcessService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/service/RegionImportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/service/RegionImportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/util/ImportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/util/ImportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/wrapper/Column.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/imports/wrapper/Column.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/util/file/FileService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/util/file/FileService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/util/file/FileService$ImportFileNameFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/util/file/FileService$ImportFileNameFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/util/file/FileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/classes/org/triplem/insurancedataservice/util/file/FileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/.openapi-generator/FILES" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/.openapi-generator/FILES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/.openapi-generator/insurance-data-api.yaml-insurance-data-api.sha256" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/.openapi-generator/insurance-data-api.yaml-insurance-data-api.sha256" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/annotations/org/triplem/insurancedataservice/data/faktor/mapper/FeeMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/annotations/org/triplem/insurancedataservice/data/imports/mapper/ColumnMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/annotations/org/triplem/insurancedataservice/data/imports/mapper/ColumnMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/annotations/org/triplem/insurancedataservice/data/imports/mapper/TableMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/annotations/org/triplem/insurancedataservice/data/imports/mapper/TableMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/src/main/java/com/tsystems/spots/api/ApiUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/src/main/java/com/tsystems/spots/api/FeeApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/src/main/java/com/tsystems/spots/api/ImportApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/src/main/java/com/tsystems/spots/api/UserApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/src/main/java/com/tsystems/spots/models/FeeRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/generated-sources/src/main/java/com/tsystems/spots/models/FeeResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/test-classes/org/triplem/insurancedataservice/data/faktor/repository/FactorVehicleTypeRepositoryTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/test-classes/org/triplem/insurancedataservice/data/faktor/repository/FeeRepositoryTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/test-classes/org/triplem/insurancedataservice/data/faktor/service/FeeServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../insurance-data-service/target/test-classes/org/triplem/insurancedataservice/imports/ImportProcessServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-data-service/target/test-classes/org/triplem/insurancedataservice/imports/ImportProcessServiceTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-proxy/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-proxy/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-proxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-proxy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../insurance-proxy/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../insurance-proxy/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmd.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipped-data/mysql-data.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,32 +164,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.keycloak/Dockerfile.executor": "Run",
-    "Docker.service.keycloak: Compose Deployment.executor": "Run",
-    "Docker.service: Compose Deployment.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/momor/workspace/insurance-service/insurance-proxy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.database.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.database: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.keycloak.keycloak: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.keycloak/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.keycloak: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.service.keycloak: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.service/docker-compose_backup.yml.keycloak: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.service/docker-compose_backup.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.service/docker-compose_full.yml.insurance-db-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.service/docker-compose_full.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/momor/Workspace/insurance-service/insurance-database/service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\momor\Workspace\insurance-service\insurance-database\service" />
+      <recent name="C:\Users\momor\Workspace\insurance-service\insurance-database\service\keycloak" />
+      <recent name="C:\Users\momor\Workspace\insurance-service\insurance-database\service\database" />
       <recent name="C:\Users\momor\Workspace\insurance-service\insurance-database\mysql-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\momor\Workspace\insurance-service\insurance-database\database_and_keycloak_service.yml" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.service: Compose Deployment">
+  <component name="RunManager" selected="Docker.service/docker-compose_full.yml.insurance-db-service: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -89,18 +213,18 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="keycloak/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
+    <configuration name="database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="keycloak/Dockerfile" />
+          <option name="sourceFilePath" value="service/database/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="mysql-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="mysql-service/docker-compose.yml" />
+          <option name="sourceFilePath" value="service/keycloak/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -113,25 +237,34 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="service.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="service/docker-compose_full.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="service/docker-compose_full.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="service/docker-compose_full.yml.insurance-db-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="keycloak" />
+              <option value="insurance-db-service" />
             </list>
           </option>
-          <option name="sourceFilePath" value="service/docker-compose.yml" />
+          <option name="sourceFilePath" value="service/docker-compose_full.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.service/docker-compose_full.yml.insurance-db-service: Compose Deployment" />
+        <item itemvalue="Docker.service/docker-compose_full.yml: Compose Deployment" />
         <item itemvalue="Docker.service: Compose Deployment" />
-        <item itemvalue="Docker.service.keycloak: Compose Deployment" />
-        <item itemvalue="Docker.keycloak/Dockerfile" />
-        <item itemvalue="Docker.mysql-service: Compose Deployment" />
+        <item itemvalue="Docker.keycloak: Compose Deployment" />
+        <item itemvalue="Docker.database: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -152,6 +285,14 @@
       <updated>1719470646727</updated>
       <workItem from="1719470647920" duration="599000" />
       <workItem from="1719675571950" duration="4520000" />
+      <workItem from="1720184118337" duration="1706000" />
+      <workItem from="1720252602624" duration="751000" />
+      <workItem from="1720254895229" duration="78000" />
+      <workItem from="1720289153820" duration="491000" />
+      <workItem from="1720289836346" duration="6880000" />
+      <workItem from="1720361827099" duration="303000" />
+      <workItem from="1720362137126" duration="1026000" />
+      <workItem from="1720366334435" duration="775000" />
     </task>
     <servers />
   </component>

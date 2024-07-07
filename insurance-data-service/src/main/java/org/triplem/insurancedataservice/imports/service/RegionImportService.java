@@ -40,6 +40,7 @@ public class RegionImportService extends ImportService<RegionDAO> {
     @Override
     protected void saveImportData(List<RegionDAO> importData) {
         regionRepository.saveAll(importData);
+        regionRepository.flush();
     }
 
     @Override

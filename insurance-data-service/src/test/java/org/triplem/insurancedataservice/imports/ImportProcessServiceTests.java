@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.triplem.insurancedataservice.imports.service.ImportProcessService;
 
 import java.io.File;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
@@ -18,17 +19,17 @@ public class ImportProcessServiceTests {
     @Autowired
     ImportProcessService importProcessService;
 
+    private File importFile;
+
     @BeforeEach
     void init() {
-        File importFile = new File(Paths.get("src", "test", "resources", "region_test.csv").toString());
-        importProcessService.setImportFile(importFile);
-        importProcessService.setTableName("region");
+        importFile = new File(Paths.get("src", "test", "resources", "region_test.csv").toString());
     }
 
     @Test
     @DisplayName("Import region file")
     void testImportRegionFile() {
-        assertDoesNotThrow(() -> importProcessService.startImport());
+        assertDoesNotThrow(() -> importProcessService.startImport(Files.readAllBytes(importFile.toPath()), "region"));
     }
 
 

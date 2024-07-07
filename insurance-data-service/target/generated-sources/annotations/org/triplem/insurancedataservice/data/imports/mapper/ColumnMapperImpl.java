@@ -6,8 +6,8 @@ import org.triplem.insurancedataservice.imports.wrapper.Column;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-07-02T18:10:54+0200",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.11 (Azul Systems, Inc.)"
+    date = "2024-07-07T16:24:13+0200",
+    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.10 (Azul Systems, Inc.)"
 )
 public class ColumnMapperImpl implements ColumnMapper {
 
@@ -17,10 +17,13 @@ public class ColumnMapperImpl implements ColumnMapper {
             return null;
         }
 
-        Column column = new Column();
+        String name = null;
+        String dataType = null;
 
-        column.setName( allTabColumnDAO.getColumnName() );
-        column.setDataType( allTabColumnDAO.getDataType() );
+        name = allTabColumnDAO.getColumnName();
+        dataType = allTabColumnDAO.getDataType();
+
+        Column column = new Column( name, dataType );
 
         return column;
     }

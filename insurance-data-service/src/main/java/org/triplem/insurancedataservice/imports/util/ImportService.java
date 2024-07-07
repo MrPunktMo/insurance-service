@@ -17,11 +17,10 @@ public abstract class ImportService<C> {
     }
 
     protected boolean importData(ImportData importData, ImportService<C> importService) {
-        boolean isImported = false;
         Class<C> dataClass = (Class<C>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0];
         importService.truncateTable();
         importService.saveImportData(importDataPreparator.getInsertData(dataClass, initImportObjects(importService, importData.getImportAmount()), importData.getValues()));
-        return isImported;
+        return true;
     }
 
     private List<C> initImportObjects(ImportService<C> importService, Long amount) {

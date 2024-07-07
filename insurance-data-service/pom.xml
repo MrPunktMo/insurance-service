@@ -25,6 +25,9 @@
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.version>3.13.0</maven.compiler.version>
+        <maven.jar.version>3.4.2</maven.jar.version>
+        <maven.dependency.version>3.6.0</maven.dependency.version>
+        <maven.resources.version>3.3.1</maven.resources.version>
 
         <!--compilation-->
         <lombok.version>1.18.26</lombok.version>
@@ -39,6 +42,7 @@
         <!--rest-->
         <spring.version>3.1.5</spring.version>
         <mysql-driver.version>8.4.0</mysql-driver.version>
+        <charset.version>2.5.0</charset.version>
 
     </properties>
     <dependencies>
@@ -82,9 +86,8 @@
         <dependency>
             <groupId>com.github.albfernandez</groupId>
             <artifactId>juniversalchardet</artifactId>
-            <version>2.5.0</version>
+            <version>${charset.version}</version>
         </dependency>
-
         <!--compile-->
         <dependency>
             <groupId>org.mapstruct</groupId>
@@ -109,7 +112,68 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>insurance-company/insurance-data-service</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/insurance-company</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>resources</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven.dependency.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/insurance-company/lib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven.jar.version}</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>org.triplem.insurancedataservice.InsuranceDataServiceApplication</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>.</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -140,11 +204,10 @@
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <generatorName>spring</generatorName>
                             <output>${project.build.directory}/generated-sources/</output>
-                            <apiPackage>com.tsystems.spots.api</apiPackage>
-                            <modelPackage>com.tsystems.spots.models</modelPackage>
+                            <apiPackage>org.triplem.insurancedataservice.api</apiPackage>
+                            <modelPackage>org.triplem.insurancedataservice.models</modelPackage>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
-<!--                                <dateLibrary>legacy</dateLibrary>-->
                                 <library>spring-boot</library>
                                 <useSpringBoot3>true</useSpringBoot3>
                             </configOptions>

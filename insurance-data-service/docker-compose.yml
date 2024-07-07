@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  insurance-db-service:
+    image: insurance-data-service:latest
+    restart: always
+    container_name: insurance_data_service
+    environment:
+      INSURANCE_DATABASE_URL: 'jdbc:mysql://host.docker.internal:8182/insurance_data'
+    expose:
+      - 8283
+    ports:
+      - "8283:8283"

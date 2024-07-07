@@ -21,7 +21,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/FeeResponse'
+                  $ref: '#/components/schemas/Fee'
         '400':
           description: Bad Request
         '401':
@@ -35,7 +35,7 @@ paths:
         id: efllpcs12n8b6
       description: Get all fees
     post:
-      summary: Request fee
+      summary: Save fee
       tags:
         - Fee
       responses:
@@ -44,7 +44,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FeeResponse'
+                $ref: '#/components/schemas/Fee'
         '400':
           description: Bad Request
         '401':
@@ -53,15 +53,15 @@ paths:
           description: Forbidden
         '500':
           description: Internal Server Error
-      operationId: postRequestFee
+      operationId: saveFee
       x-stoplight:
         id: 6xriflgml4af7
-      description: Request the calculation of an insurance fee
+      description: Save requested fee in database
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/FeeRequest'
+              $ref: '#/components/schemas/Fee'
       security:
         - bearerKey: []
   /user/fee:
@@ -77,7 +77,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/FeeResponse'
+                  $ref: '#/components/schemas/Fee'
         '401':
           description: Unauthorized
         '403':
@@ -99,67 +99,127 @@ paths:
         id: jzd1ue3avi5m9
       requestBody:
         content:
-          multipart/form-data:
+          text/csv:
             schema:
-              type: object
-              required:
-                - regionFile
-              properties:
-                regionFile:
-                  type: string
-                  x-stoplight:
-                    id: 1i8268t89yrri
-                  format: byte
+              type: string
+              format: byte
       description: Import Region csv file endpoint
       tags:
         - Import
+  /factor/vehicletype:
+    get:
+      summary: Get the factors of vehicle types
+      tags:
+        - Factor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FactorVehicleType'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      operationId: getFactorVehicleType
+      x-stoplight:
+        id: jiplbbd29cmea
+      description: Get the factors set by the vehicle types
+  /factor/region:
+    get:
+      summary: Get the factors of vehicle types
+      tags:
+        - Factor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FactorRegion'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      operationId: getFactorRegions
+      description: Get the factors set by the region
+      x-stoplight:
+        id: cw37ypcdtzsge
+    parameters: []
+  /factor/kilometrage:
+    get:
+      summary: Get the factors of kilometrages
+      tags:
+        - Factor
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FactorKilometrage'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      operationId: getFactorKilometrages
+      description: Get the factors set by the kilometrage
+      x-stoplight:
+        id: a2s8wn0fpqctx
+    parameters: []
+  /region:
+    get:
+      summary: Get all regions
+      tags:
+        - General
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Region'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+      operationId: getRegions
+      x-stoplight:
+        id: nyuh9xwzehx50
+      description: Get all regionen
 components:
   schemas:
-    FeeRequest:
-      title: FeeRequest
-      x-stoplight:
-        id: iuew8fmxkfugk
-      type: object
-      x-tags:
-        - Fee
-      description: Request for calculating the insurance fee
-      required:
-        - kilometrage
-        - vehicleType
-        - postalCode
-        - userName
-      properties:
-        kilometrage:
-          type: integer
-          x-stoplight:
-            id: 1ev71vfbumy52
-          format: int32
-          exclusiveMinimum: false
-          minimum: 0
-        vehicleType:
-          type: string
-          x-stoplight:
-            id: te81oia758bkl
-        postalCode:
-          type: string
-          x-stoplight:
-            id: k4zkl760l9v1g
-          pattern: '^[0-9]{5}'
-        userName:
-          type: string
-          x-stoplight:
-            id: tck7zxpf2cw08
-    FeeResponse:
-      title: FeeResponse
+    Fee:
+      title: Fee
       x-stoplight:
         id: o0qwsws0960sn
       type: object
+      description: Fee for the insurance
+      x-tags:
+        - Fee
       required:
         - amount
         - kilometrage
-        - region
+        - postalCode
         - vehicleType
-        - createdOn
+        - user
       properties:
         amount:
           type: number
@@ -171,7 +231,7 @@ components:
           x-stoplight:
             id: i8agzaukvrnmp
           format: int32
-        region:
+        postalCode:
           type: string
           x-stoplight:
             id: 8ye4up36v78g4
@@ -179,12 +239,129 @@ components:
           type: string
           x-stoplight:
             id: mvnz4znz5w6q4
+        user:
+          type: string
+          x-stoplight:
+            id: dedm8ay4h2cv2
         createdOn:
           type: string
           x-stoplight:
             id: pzrbeflfs36i4
           format: date
-      description: Resonse to the requested fee
+    FactorVehicleType:
+      title: FactorVehicleType
+      x-stoplight:
+        id: hjc5drbsxuzfs
+      type: object
+      description: Factor of a vehicle type
+      x-tags:
+        - Factor
+      required:
+        - id
+        - type
+        - factor
+      properties:
+        id:
+          type: integer
+          x-stoplight:
+            id: 4d788rp0vdb1n
+          format: int32
+        type:
+          type: string
+          x-stoplight:
+            id: eq0xk80py2tes
+        factor:
+          type: number
+          x-stoplight:
+            id: uhmbwmejx28jn
+          format: float
+    FactorRegion:
+      title: FactorRegion
+      x-stoplight:
+        id: kjoz5tt19git5
+      type: object
+      description: Factor set by the region
+      x-tags:
+        - Factor
+      required:
+        - id
+        - region
+        - factor
+      properties:
+        id:
+          type: integer
+          x-stoplight:
+            id: 2h5sxb75by5px
+          format: int32
+        region:
+          type: string
+          x-stoplight:
+            id: 28frnslbn14ye
+        factor:
+          type: number
+          x-stoplight:
+            id: gznmrzuuj0gwz
+          format: float
+    FactorKilometrage:
+      title: FactorKilometrage
+      x-stoplight:
+        id: gqm0kx0iz7o73
+      type: object
+      description: Factor set by the kilometrage
+      x-tags:
+        - Factor
+      required:
+        - id
+        - from
+        - factor
+      properties:
+        id:
+          type: integer
+          x-stoplight:
+            id: up19oq9hzxg2y
+          format: int32
+        from:
+          type: integer
+          x-stoplight:
+            id: 2pplrgmrvdws7
+          format: int32
+        to:
+          type: integer
+          x-stoplight:
+            id: mpk3ojxcen9ck
+          format: int32
+        factor:
+          type: number
+          x-stoplight:
+            id: 8c3r209pa3bp2
+          format: float
+    Region:
+      title: Region
+      x-stoplight:
+        id: k677cmandeiu9
+      type: object
+      x-tags:
+        - General
+      description: Region of the country
+      required:
+        - id
+        - name
+        - postalCode
+      properties:
+        id:
+          type: integer
+          x-stoplight:
+            id: v6d3s3tddw1k3
+          format: int32
+        name:
+          type: string
+          x-stoplight:
+            id: dj3s59uug2wp9
+        postalCode:
+          type: string
+          x-stoplight:
+            id: klurr2u5jsz40
+          pattern: '^[0-9]{5}'
   securitySchemes:
     bearerKey:
       type: oauth2
@@ -195,7 +372,11 @@ components:
           refreshUrl: ''
           scopes: {}
 tags:
+  - name: Factor
+    description: Factors for insurance fee calculation
   - name: Fee
     description: Insurance Fee
+  - name: General
+    description: Region with related postcodes
   - name: Import
     description: Import files

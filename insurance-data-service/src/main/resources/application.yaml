@@ -1,14 +1,18 @@
 security-matchers: >
   /hello/**,
+  /factor/**,
   /fee,
-  /fee/**
+  /fee/**,
+  /import/**
 
 authorize-admin: >
-  /**/fee,
-  /**/admin
+  /**/admin,
+  /**/import/**
 
 authorize-user: >
+  /**/fee
   /**/user,
+  /factor/**,
   /insurance-data/fee/**
 
 permit-all: >
@@ -26,14 +30,14 @@ spring:
   application:
     name: insurance-data-service
   jpa:
-    show-sql: true
+    show-sql: false
     hibernate:
-      ddl-auto: validate
+      ddl-auto: none
   datasource:
     url: ${INSURANCE_DATABASE_URL:jdbc:mysql://localhost:8182/insurance_data}
     username: user
     password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
   security:
     oauth2:
       resourceserver:
